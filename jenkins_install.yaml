@@ -1,0 +1,10 @@
+---
+- name: installing jenkins on centos 7
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: adding repo to yum
+    get_url:
+      url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+      dest: /etc/yum.repos.d/jenkins.repo
+       
